@@ -1,8 +1,11 @@
-"""Practice with conditionals"""
+"""Practice with conditionals, variables, and elif"""
 
 
 def less_than_10(num: int) -> bool:
     """tell me if num is less than 10."""
+    dub: int = num * 2
+    dub = dub - 1
+    print(dub)
     if num < 10:
         print("Small Number")
     else:
@@ -10,7 +13,7 @@ def less_than_10(num: int) -> bool:
     print("Have a nice day!")
 
 
-# less_than_10(num=11)
+# less_than_10(num=5)
 
 
 def should_i_eat(hungry: bool) -> None:
@@ -33,4 +36,19 @@ def check_first_letter(word: str, letter: str) -> str:
         return "no match!"
 
 
-print(check_first_letter(word="happy", letter="h"))
+# print(check_first_letter(word="happy", letter="h"))
+
+
+def get_weather_report() -> str:
+    """tells the weather instructions"""
+    weather: str = input("What is the weather?")
+    if weather == "rainy" or weather == "cold":
+        print("Bring a jacket!")
+    elif weather == "hot":
+        print("Keep cool out there!")
+    else:
+        print("I don't recognize this weather.")
+    return weather
+
+
+get_weather_report()
