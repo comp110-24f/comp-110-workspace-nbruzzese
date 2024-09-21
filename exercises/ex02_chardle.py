@@ -1,6 +1,6 @@
 """EX02 - Chardle - A cute step toward Wordle."""
 
-__author__ = "730679404"
+__author__ = "730649404"
 
 
 def input_word() -> str:
