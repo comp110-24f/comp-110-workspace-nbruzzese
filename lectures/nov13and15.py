@@ -54,5 +54,25 @@ def last(head: Node) -> int:
         return rest
 
 
-print(last(one))  # Expect to print 2
 print(last(courses))  # Expect to print 301
+
+
+def recursive_range(start: int, end: int) -> Node | None:
+    """Build a list recursivly from start to end."""
+    if start > end:
+        raise ValueError("Invalid arguements")
+    if start == end:
+        # Base Case
+        return None
+    else:
+        # Recursive Case
+        # 1. Handle the first value in your new list here!
+        first: int = start
+        # 2. Let the rest of the list be handled recursively!
+        rest: Node | None = recursive_range(start + 1, end)
+        # 3. Return a new node which is first followed by rest
+        return Node(first, rest)
+
+
+a_list: Node | None = recursive_range(110, 113)
+print(a_list)
